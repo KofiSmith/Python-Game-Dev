@@ -1,4 +1,4 @@
-This game project was inspired by Google chrome browser's offline mode game, Dino Jump. This recreation (for mobile screens) seeking to take the original game to a different level in aesthetics especially was a challenge meant to improve my programming and game development skills
+This game project was inspired by Google chrome browser's offline mode game, Dino Jump. This recreation (for mobile screens) seeking to take the original game to a different level in aesthetics especially was a challenge meant to improve my programming and game development skills. Note that it is public and available for open sourcing.
 
 Here are some screenshots
 
