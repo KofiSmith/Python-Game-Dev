@@ -6,14 +6,14 @@ pygame.display.set_caption('DIno jump')
 clock = pygame.time.Clock()
 
 #importing game objects
-background = pygame.image.load('Background.png').convert()
-platform= pygame.image.load('Platform.png').convert_alpha()
-small_cactus = pygame.image.load("Small_cactus.png").convert_alpha()
-big_cactus = pygame.image.load("Big_cactus.png").convert_alpha()
-dinosaur_stand = pygame.image.load('Dino.png').convert_alpha()
-dinosaur_jump = pygame.image.load("Dino_jump.png")
-meteor = pygame.image.load('Meteor.png').convert_alpha()
-sound = pygame.mixer.Sound('sound.mp3')
+background = pygame.image.load('game_assets/Background.png').convert()
+platform= pygame.image.load('game_assets/Platform.png').convert_alpha()
+small_cactus = pygame.image.load("game_assets/Small_cactus.png").convert_alpha()
+big_cactus = pygame.image.load("game_assets/Big_cactus.png").convert_alpha()
+dinosaur_stand = pygame.image.load('game_assets/Dino.png').convert_alpha()
+dinosaur_jump = pygame.image.load("game_assets/Dino_jump.png")
+meteor = pygame.image.load('game_assets/Meteor.png').convert_alpha()
+sound = pygame.mixer.Sound('game_assets/sound.mp3')
 
 
 #Scaling and positioning game sprites
