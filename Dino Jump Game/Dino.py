@@ -15,6 +15,8 @@ dinosaur_jump = pygame.image.load("game_assets/Dino_jump.png")
 meteor = pygame.image.load('game_assets/Meteor.png').convert_alpha()
 sound = pygame.mixer.Sound('game_assets/sound.mp3')
 
+pterosaur1 = pygame.image.load("game_assets/pterosaur1.png").convert_alpha()
+pterosaur2 = pygame.image.load("game_assets/pterosaur2.png").convert_alpha()
 
 #Scaling and positioning game sprites
 background = pygame.transform.scale(background, (760,500))
