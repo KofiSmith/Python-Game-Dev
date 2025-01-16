@@ -36,6 +36,10 @@ dino_rect = dinosaur.get_rect(midbottom=(80, 615))
 meteor = pygame.transform.scale(meteor, (130,55))
 meteor_rect = meteor.get_rect(midbottom=(500,590))
 	
+pterosaur1 = pygame.transform.scale(pterosaur1,(160,110))
+pterosaur2 = pygame.transform.scale(pterosaur2,(160,110))
+pterosaur_frames = [pterosaur1, pterosaur2]
+pterosaur_index = 0
 
 
 
