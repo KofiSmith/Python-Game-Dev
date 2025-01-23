@@ -78,6 +78,17 @@ def dino_animation():
 	else:
 		dinosaur = dinosaur_stand
 
+def ptero_animation():
+	global pterosaur, pterosaur_rect, pterosaur_index
+	pterosaur_index +=0.1
+	if pterosaur_index >= len(pterosaur_frames):
+		pterosaur_index = 0
+	pterosaur = pterosaur_frames[int(pterosaur_index)]
+
+ptero_animation()
+pterosaur_rect = pterosaur.get_rect(midbottom=(500,450))
+
+
 
 #Setting player gravity
 gravity =0
