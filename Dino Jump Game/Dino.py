@@ -128,7 +128,14 @@ while running:
 		    meteor_rect.left=800
 		screen.blit(meteor, meteor_rect)
 		
-	#Dinosaur jump
+		#pterosaur animation
+		ptero_animation()
+		pterosaur_rect.left-=13
+		if pterosaur_rect.right<=0:
+			pterosaur_rect.left=800
+		screen.blit(pterosaur, pterosaur_rect)
+	
+		#Dinosaur jump
 		gravity += 1
 		dino_rect.y += gravity
 		if dino_rect.bottom >= 615:
