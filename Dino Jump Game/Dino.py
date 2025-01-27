@@ -42,9 +42,6 @@ pterosaur_frames = [pterosaur1, pterosaur2]
 pterosaur_index = 0
 
 
-
-
-
 curr_time = int(pygame.time.get_ticks()/1000)
 score_font = pygame.font.SysFont('Arial', 35)
 
@@ -105,7 +102,8 @@ running = True
 #Main gameloop	
 while running:
 	screen.fill((0,0,0))
-	
+
+	#Getting user input 
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:	
 			running = False
