@@ -41,7 +41,6 @@ pterosaur2 = pygame.transform.scale(pterosaur2,(160,110))
 pterosaur_frames = [pterosaur1, pterosaur2]
 pterosaur_index = 0
 
-
 curr_time = int(pygame.time.get_ticks()/1000)
 score_font = pygame.font.SysFont('Arial', 35)
 
@@ -57,9 +56,7 @@ def display_score():
 
 score = 0	
 
-
 #Game Over message
-
 game_over_message_font = pygame.font.SysFont('Arial', 65)
 game_over_message= game_over_message_font.render(f"Game Over", True, (0,0,0))
 
@@ -85,17 +82,13 @@ def ptero_animation():
 ptero_animation()
 pterosaur_rect = pterosaur.get_rect(midbottom=(500,450))
 
-
-
 #Setting player gravity
 gravity =0
 
 #game active set to true so far as game is not over
 game_active = True
 
-
 running = True
-
 
 #sound.play()
 
@@ -156,7 +149,7 @@ while running:
 		game_over_score = game_over_score_font.render(f"You scored: {score}", False, (0,0,0))
 		game_over_rect=game_over_message.get_rect(center=(380,500))
 		
-		#Dislaying text on game over screen
+		#Dislaying Game over message on game over screen
 		screen.blit(game_over_message,(180,350))
 		screen.blit(game_over_score,game_over_rect)
 		
