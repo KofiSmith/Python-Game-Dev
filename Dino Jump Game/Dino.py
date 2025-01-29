@@ -1,3 +1,4 @@
+#THIS CODE IS CURSED
 import pygame
 
 pygame.init()
