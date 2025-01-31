@@ -15,7 +15,7 @@ Game Over Screen
 How you can contribute to this pygame project 
 1. Work on the screen orientation; change it to a landscape view
 2. Add some more dynamic enemy objects 
-3. Improve the asset arts
+3. Improve the asset arts with sprite sheets
 4. Organize the codes by putting separate functionalities into separate files
 5. Add UI to the game
 6. Add suitable comments to the codes
