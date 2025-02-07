@@ -66,6 +66,7 @@ game_over_score = game_over_score_font.render(f"You scored: {score}", False, (0,
 game_over_rect=game_over_message.get_rect(center=(380,500))
 
 #Dinosaur jump animation
+#Implement a running animation 
 def dino_animation():
 	global dinosaur
 	if dino_rect.bottom<615:
