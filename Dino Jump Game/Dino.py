@@ -92,11 +92,12 @@ game_active = True
 
 running = True
 
-#sound.play()
+sound.play()
 
 #Main gameloop	
 while running:
 	screen.fill((0,0,0))
+	pygame.time.delay(3000)
 
 	#Getting user input 
 	for event in pygame.event.get():
