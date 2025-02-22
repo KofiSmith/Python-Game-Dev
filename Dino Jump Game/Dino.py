@@ -7,12 +7,12 @@ clock = pygame.time.Clock()
 
 
 #BACKGROUND
-background = pygame.image.load('Background.png').convert()
+background = pygame.image.load('game_aasets/Background1.png').convert()
 background = pygame.transform.scale(background, (760,500))
 	
 				
 #PLATFORM
-platform= pygame.image.load('Background(0).png').convert_alpha()
+platform= pygame.image.load('game_assets/Background(0).png').convert_alpha()
 platform = pygame.transform.scale(platform, (2000,170))
 position = 0
 
@@ -27,9 +27,9 @@ def platform_animation():
 
 
 #DINOSAUR
-dino_walk1 = pygame.image.load('dino_walk1.png').convert_alpha()
-dino_walk2 = pygame.image.load('dino_walk2.png').convert_alpha()
-dinosaur_jump = pygame.image.load("Dino_jump.png").convert_alpha()
+dino_walk1 = pygame.image.load('game_assets/dino_walk1.png').convert_alpha()
+dino_walk2 = pygame.image.load('game_assets/dino_walk2.png').convert_alpha()
+dinosaur_jump = pygame.image.load("game_assets/Dino_jump.png").convert_alpha()
 
 dino_walk1 = pygame.transform.scale(dino_walk1, (100,100))
 dino_walk2 = pygame.transform.scale(dino_walk2, (100,100))
@@ -54,8 +54,8 @@ dino_rect = dinosaur.get_rect(midbottom=(100, 615))
 
 
 #PTEROSAUR
-pterosaur1 = pygame.image.load("pterosaur1.png").convert_alpha()
-pterosaur2 = pygame.image.load("pterosaur2.png").convert_alpha()
+pterosaur1 = pygame.image.load("game_assets/pterosaur1.png").convert_alpha()
+pterosaur2 = pygame.image.load("game_assets/pterosaur2.png").convert_alpha()
 pterosaur1 = pygame.transform.scale(pterosaur1,(120,90))
 pterosaur2 = pygame.transform.scale(pterosaur2,(120,90))
 pterosaur_frames = [pterosaur1, pterosaur2]
@@ -74,7 +74,7 @@ pterosaur_rect = pterosaur.get_rect(midbottom=(500,450))
 
 
 #METEOR
-meteor = pygame.image.load('Meteor.png').convert_alpha()
+meteor = pygame.image.load('game_assets/Meteor.png').convert_alpha()
 meteor = pygame.transform.scale(meteor, (130,55))
 meteor_rect = meteor.get_rect(midbottom=(500,590))
 
