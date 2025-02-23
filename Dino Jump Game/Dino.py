@@ -25,6 +25,9 @@ def platform_animation():
 	if abs(position) > platform.get_width():
 		position = 0
 
+#WORK ON BACKGROUND SCROLLING ANIMATION 
+
+
 
 #DINOSAUR
 dino_walk1 = pygame.image.load('game_assets/dino_walk1.png').convert_alpha()
