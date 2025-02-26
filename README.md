@@ -1,2 +1,2 @@
-# Python-Game-Dev
-Repository for game development projects with Pygame
+# Game-Development
+Repository for game development projects
