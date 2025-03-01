@@ -7,7 +7,7 @@ This game project was inspired by Google chrome browser's offline mode game, Din
 
 # Here are some screenshots of the project
 
-!["Screenshot"](Screenshot.png)
+!["Screenshot"](Game_screenshots/Screenshot_20250220-142655_1.png)
 
 # Game Over Screen
 
