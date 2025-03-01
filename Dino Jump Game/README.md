@@ -11,7 +11,7 @@ This game project was inspired by Google chrome browser's offline mode game, Din
 
 # Game Over Screen
 
-!["Screenshot"](Screenshot1.png)
+!["Screenshot"](Dino Jump Game/Game Screenshots/Screenshot_20250223-213536_1.png)
 
 # How you can contribute to this pygame project 
 1. Work on the screen orientation; change it to a landscape view
