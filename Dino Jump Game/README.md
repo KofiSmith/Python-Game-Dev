@@ -7,17 +7,13 @@ This game project was inspired by Google chrome browser's offline mode game, Din
 
 # Here are some screenshots of the project
 # Menu SCreen
-
-
-!["Screenshot"](GameGame_screenshots_screenshots/Screenshot_20250220-142655_1.png)
-
-
 !["Screenshot"](Game_screenshots/1740762097825.png)
 
+# Gameplay Screen
+!["Screenshot"](Game_screenshots/Screenshot_20250220-142655_1.png)
 
 
 # Game Over Screen
-
 !["Screenshot"](Game_screenshots/Screenshot_20250223-213536_1.png)
 
 # How you can contribute to this pygame project 
