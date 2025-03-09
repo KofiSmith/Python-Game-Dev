@@ -16,7 +16,7 @@ This game project was inspired by Google chrome browser's offline mode game, Din
 # Game Over Screen
 !["Screenshot"](Game_screenshots/Screenshot_20250223-213536_1.png)
 
-#Working on a parallax background design
+# Working on a parallax background design
 !["Screenshot"](Game_screenshots/1740959351642.png)
 
 # How you can contribute to this pygame project 
