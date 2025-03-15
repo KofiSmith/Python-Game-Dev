@@ -25,5 +25,4 @@ This game project was inspired by Google chrome browser's offline mode game, Din
 4. Organize the codes by putting separate functionalities into separate files
 5. Add UI to the game
 6. Add suitable comments to the codes
-7. Simple txt database for score keeping.
-8. Any helpful contribution is welcome.
+7. Any helpful contribution is welcome.
