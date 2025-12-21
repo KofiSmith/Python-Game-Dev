@@ -2,7 +2,7 @@
 import pygame
 
 all_sprites = pygame.sprite.Group()
-platforms = pygame.sprite.Group()
+all_platforms = pygame.sprite.Group()
 
 import random
 from parallax_background import ParallaxBG
@@ -35,7 +35,7 @@ platform_position = 0
 
 background = ParallaxBG(platform, mountain, background)
 
-
+all_platforms.add(background)
 
 #LOADING AND TRANSFORMING DINOSAUR IMAGE
 dino_walk1 = pygame.image.load('dino_walk1.jpg').convert_alpha()
@@ -146,8 +146,56 @@ def change_sprite():
             #all_sprites.draw(screen)
 
 
-#USE SPRITE GROUP TO CHECK IF THE ENEMY SPRITE IS STILL ON SCREEN, IF ENEMY SPRITE IS OFF THE SCREEN THEN YOU GENERATE ANOTHER RANDOM ENEMY
 
+"""
+
+class Platforms(pygame.sprite.Sprite):
+	def __init__(self, img1, img2, midbottom_pos):  
+		super().__init__()
+		self.img1 = img1
+		self.img2 = img2
+		self.frames = [img1, img2] 
+		self.frame_index = 0  
+		self.image = img1
+		#Store position as rect
+		self.rect = self.image.get_rect(midbottom=midbottom_pos)  
+		self.animation_speed = 0.15
+		
+	def animation(self):
+		# Update frame index
+		self.frame_index += self.animation_speed
+		if self.frame_index >= len(self.frames):
+			self.frame_index = 0
+		
+		# Update current image
+		self.image = self.frames[int(self.frame_index)]
+		
+		# Keep the same position when changing frames
+		current_pos = self.rect.midbottom
+		self.rect = self.image.get_rect(midbottom=current_pos)
+		
+	def attack(self):
+		# Move the obstacle
+		self.rect.left -= 15
+		
+		# Reset position when off screen
+		#if self.rect.right <= 0:
+			#self.rect.left = 800
+			
+		# Draw to screen (usually this would be in main game loop)
+		# screen.blit(self.image, self.rect)
+		
+	def update(self):
+		# Common pattern: update animation and movement together
+		self.animation()
+		self.attack()    
+		
+meteor = Obstacles(meteor1,meteor2,(800,655)) 
+pterosaur = Obstacles(pterosaur1, pterosaur2,(800,530))
+
+
+all_sprites.add(meteor) 
+"""
 
 #SCORE COUNTER
 score_font = pygame.font.SysFont('Arial', 35)
@@ -200,7 +248,7 @@ def game_over_display():
 	screen.blit(game_over_message,(180,350))
 	screen.blit(game_over_score,game_over_score_rect)
 	screen.blit(game_over_high_score_info, (240, 510))
-
+	
 
 
 #SOUNDS
@@ -219,6 +267,18 @@ running = True
 
 
 
+def game_over():
+    for sprite in all_sprites.sprites():
+        if sprite.rect.colliderect(dino_rect):
+            if score>int(high_score):
+                high_score = score
+                add_high_score()
+            game_active = False
+            game_over_display()
+            
+
+
+
 #MAIN GAME LOOP	
 while running:
 	screen.fill((0,0,0))
@@ -229,7 +289,7 @@ while running:
 			running = False
 		if event.type == pygame.FINGERDOWN and dino_rect.bottom == 680:
 			jump_sound.play()
-			gravity = -20
+			gravity = -24
 	
 			
 	if curr_time%100==0:
@@ -240,20 +300,18 @@ while running:
 		background.animate()
 		
 		#Score counter
+		add_high_score()
 		display_score()
 		display_high_score()
 		score = curr_time
 		
 		
-		#animate_obstacle()
+		
 		
 		#if score%100==0:
 			#beep_sound.play()
 		
-		#Obstacle animation
 		
-		#all_sprites.update()
-		#all_sprites.draw(screen)
 		change_sprite()
 		
 		
@@ -266,20 +324,30 @@ while running:
 		screen.blit(dinosaur, dino_rect)
 		
 	#Checking for collision and printing message
-	"""
-	if dino_rect.colliderect(obstacle_rect):
-		if score>int(high_score):
-			high_score = score
-			add_high_score()
-		game_active = False
-		game_over_display()
+	
+	for sprite in all_sprites.sprites():
+		if sprite.rect.colliderect(dino_rect):
+		    
+		    if score>int(high_score):
+			    high_score = score
+			    add_high_score()
+  
+              
+		    game_active = False
+		    
+		   
+		    game_over_display()
+		    #sprite.rect.left=800
 		#game_over_sound.play()
 		
 	if event.type == pygame.FINGERDOWN:
-		game_active = True
-		obstacle_rect.left = 800
+		if game_active==False:
+			sprite.rect.left=800
+			game_active = True
+		
+		
 		#Create time reset
-	""" 
-		    	
+	
+	#game_over
 	pygame.display.flip()
 	clock.tick(60)
